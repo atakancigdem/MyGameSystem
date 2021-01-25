@@ -9,16 +9,16 @@ namespace MyGameSystem.Activity.CustomerInformationVerification.ValidateService
     {
         public void PersonVerification(Customer customer)
         {
-            if (customer.Name.Length > 1 && customer.LastName.Length > 1 && customer.NationalityId.Length == 11 && customer.DateOfBirth > 1800)
+            if (customer.Name.Length > 1 && customer.Lastname.Length > 1 && customer.NationalityId.Length == 11 && customer.DateOfBirth > 1800)
             {
-                Console.WriteLine(customer.Name + " " + customer.LastName + "  Doğrulamadan geçti.");
+                Console.WriteLine(customer.Name + " " + customer.Lastname + "  doğrulamadan geçti.");
             }
             else
             {
-                throw new Exception(customer.Name + " " + customer.LastName + " Doğrulamadan geçemedi.");
+                throw new Exception(customer.Name + " " + customer.Lastname + " doğrulamadan geçemedi.");
 
             }
         }
-
     }
 }
+   

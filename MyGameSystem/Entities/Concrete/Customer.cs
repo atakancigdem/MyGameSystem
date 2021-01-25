@@ -8,7 +8,7 @@ namespace MyGameSystem.Entities.Concrete
     {
         public int Id { get; set; }    //Id
         public string Name { get; set; }    //İsim
-        public string LastName { get; set; }    //Soyad    
+        public string Lastname { get; set; }    //Soyad    
         public string NationalityId { get; set; }   //Uyruk Id
         public int DateOfBirth { get; set; }   //Doğum Yıllı
 

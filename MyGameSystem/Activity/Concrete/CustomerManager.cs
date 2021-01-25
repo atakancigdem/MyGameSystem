@@ -2,6 +2,7 @@
 using MyGameSystem.Activity.CustomerInformationVerification;
 using MyGameSystem.DataSaving.Abstract;
 using MyGameSystem.Entities;
+using MyGameSystem.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,25 +12,30 @@ namespace MyGameSystem.Activity.Concrete
     class CustomerManager : ICustomerService
     {
         List<ILoggerService> _loggerServices;
-        public CustomerManager(List<ILoggerService> loggerServices)
+        List<IPersonVerificationService> _personVerificationServices;
+        public CustomerManager(List<ILoggerService> loggerServices, List<IPersonVerificationService> personVerificationServices)
         {
             _loggerServices = loggerServices;
+            _personVerificationServices = personVerificationServices;
         }
-        public List<ILoggerService> Lists { get; }
-        public IPersonVerificationService PersonVerificationService { get; }
-        public CustomerManager(List<ILoggerService> lists, IPersonVerificationService personVerificationService)
-        {
-  
-            PersonVerificationService = personVerificationService;
-        }
-
-
-
+       
         public void Add(IEntity entity)
         {
-            foreach (ILoggerService log in _loggerServices)
+            try
             {
-                log.Add(entity);
+                foreach (var validate in _personVerificationServices)
+                {
+                    validate.PersonVerification((Customer)entity);
+                }
+                foreach (var logger in _loggerServices)
+                {
+                    logger.Add(entity);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+
             }
         }
 
