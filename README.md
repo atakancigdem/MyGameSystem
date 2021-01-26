@@ -1,11 +1,13 @@
+
+
 <h1>My Game System</h1>
-</br>
+
 <p>We want to write a play. Developing <b><i>backend codes with C #</i></b> for this software
 we are planning. New member, sales and campaign management is required. To objects
 We are asked to give specific features.</p>
-</br>
+
 <h1>Requirements</h1>
-</br>
+
 <ul type="a">
   
   <li>Players can <b><i>register</b></i>  to the system,<b><i> update</b></i>, records Simulate an environment that it can <b><i>delete</i></b>.</li>
