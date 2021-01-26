@@ -1,4 +1,4 @@
-Bir oyun yazmak istiyorsunuz. Bu yazılım için backend kodlarını C# ile geliştirmeyi
+Bir oyun yazmak istiyoruz. Bu yazılım için backend kodlarını C# ile geliştirmeyi
 planlıyoruz. Yeni üye, satış ve kampanya yönetimi yapılması isteniyor. Nesnelere 
 ait özellikleri istediğiniz gibi verebilirsiniz. 
 
@@ -11,10 +11,8 @@ e-devlet sistemlerini kullanarak doğrulama yapmak istiyoruz.
 Bunu yapacak servisi simule etmeniz yeterlidir.)
 
 2. Oyun satışı yapılabilecek satış ortamını simule ediniz.( Yapılan satışlar 
-oyuncu ile ilişkilendirilmelidir. Oyuncunun parametre olarak metotta olmasını kastediyorum.)
+oyuncu ile ilişkilendirilmelidir. ( Oyuncunun parametre olarak metotta olmasını kastediyorum. )
 
 3. Sisteme yeni kampanya girişi, kampanyanın silinmesi ve güncellenmesi imkanlarını simule ediniz.
 
 4. Satışlarda kampanya entegrasyonunu simule ediniz.
-
-
